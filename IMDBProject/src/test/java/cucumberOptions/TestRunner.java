@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
         features = {"src/test/java/features"},
         glue={"stepDefinations"},
-        tags= {"@tag1,@tag2"})
+        tags= {"@tag,@tag2"})
 public class TestRunner  
 {
 	

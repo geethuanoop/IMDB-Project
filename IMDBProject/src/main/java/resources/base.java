@@ -1,6 +1,7 @@
 package resources;
 
 import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -15,7 +16,7 @@ public class base {
 	public WebDriver initializeDriver() throws IOException
 	{
 		prop= new Properties();
-		FileInputStream fis=new FileInputStream("/Users/igloocompany/eclipse-workspace/IMDBProject/src/main/java/resources/data.properties");
+		FileInputStream fis=new FileInputStream("/Users/igloocompany/git/IMDB-Project/IMDBProject/src/main/java/resources/data.properties");
 		prop.load(fis);
 		String browserName=prop.getProperty("browser");
 		System.out.println(browserName);
@@ -35,7 +36,7 @@ public class base {
 		{
 			//  IE code
 		}
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 	}

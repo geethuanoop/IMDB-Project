@@ -1,5 +1,5 @@
 	Feature: Verify whether the newly registered user is able to login to the IMDB Application
-@tag1
+@tag
 Scenario Outline: Successful login to IMDB application
 Given Initialize the browser with chrome
 And Navigate to "https://www.imdb.com/" Site
