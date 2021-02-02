@@ -12,8 +12,7 @@ public class NewAccount{
 	public NewAccount(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
-		PageFactory.initElements(driver, this); // not sure
-		
+		PageFactory.initElements(driver, this); // not sure	
 	}
 
 	
