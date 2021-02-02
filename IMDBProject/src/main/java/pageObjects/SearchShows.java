@@ -1,4 +1,6 @@
 package pageObjects;
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,47 +15,56 @@ public class SearchShows {
 	@FindBy(id="suggestion-search")
 	public WebElement search;
 
-
-	//@FindBy(linkText="Game of Thrones: The Last Watch")
+@FindBy(xpath="//div[normalize-space()='Game of Thrones: The Last Watch']")
+public WebElement movie;
+	
+//@FindBy(linkText="Game of Thrones: The Last Watch")
 	// public WebElement movie;
 
-	@FindBy()
+	@FindBy(xpath="//div[@id='wrapper']//h1[1]")
 	public WebElement title;
 
-	@FindBy(className="imdbRating")
+	//@FindBy(className="imdbRating")
+	//public WebElement rating;
+	@FindBy(xpath="//span[@itemprop='ratingValue']")
 	public WebElement rating;
 
-	@FindBy(css="//span[@itemprop='ratingValue']")
-	
-	public WebElement review;
+public WebElement reviews;
+
+	//@FindBy(css="//span[@itemprop='ratingValue']")
+ @FindBy(xpath="//span[@class='small']")
+ public WebElement review;
+
 	public void getShows(String searchmovie)
 	{
 		search.sendKeys(searchmovie);
 	}
 
-	//public void getSearch()//Search the movie
-	//{
-	//	search.sendKeys();
-	//}
-/*public void typeMovie(String MovieName)
+	
+public void typeMovie()
 	{
-		movie.sendKeys(MovieName);
+		movie.click();
 	}
 	
-	*/
+	
 	public void getTitle()
 	{
-
+		String gettitletext= title.getText().trim();
+		assertEquals("Game of Thrones:The Last Watch (2019)",gettitletext);
 	}
+	
 
 	public void getRating()
 	{
-		rating.isDisplayed();
+		//double expectedcnt= 7.2;
+		String actualcnt= rating.getText().trim();
+		assertEquals("7.2",actualcnt);
 	}
 
-	public void getReviews()
+	public void getReview()
 	{
-		review.isDisplayed();
+		String getreview= review.getText().trim();
+		assertEquals("5652",getreview);
 	}
 
 

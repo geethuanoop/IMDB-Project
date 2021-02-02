@@ -101,53 +101,7 @@ public class stepDefination extends base {
 @SuppressWarnings("unused")
 @RunWith(Cucumber.class)
 public class stepDefination extends base {
-	// public void initialize() throws IOException
-	   // {
-	    //     driver =initializeDriver();
-	   // }
-/*
-    @Given("^New User is in the IMDB sign in page$")
-    public void new_user_is_in_the_imdb_sign_in_page() throws Throwable {
 	
-		//driver.manage().window().maximize();
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	      driver.get("https://www.imdb.com/"); 
-	      LoginPage lp=new LoginPage(driver);
-          lp.ClickSignin();
-          lp.ClickCreateAccount();
-        throw new PendingException();
-    }
-
-    @When("^User enters (.+),(.+), (.+), (.+)$")
-    public void user_enters_(String username, String email, String password, String repassword) throws Throwable {
-    	CreateAccount ca=new CreateAccount(driver);
-    	ca.getName(username);
-    	ca.getEmail(email);
-    	ca.getPassword(password);
-    	ca.getRepassword(repassword);
-    	ca.getSubmit();
-    	throw new PendingException();
-    }
-
-    @Then("^User is  successfully logged into the application$")
-    public void user_is_successfully_logged_into_the_application() throws Throwable {
-    	VerifyUserRegistration vr= new VerifyUserRegistration(driver);
-    	vr.VerifyOTP();
-    	System.out.println("user registration completed");
-    	
-        throw new PendingException();
-    }
-
-    
-
-    @And("^close browsers$")
-    public void close_browsers() throws Throwable {
-        throw new PendingException();
-    }
-
-}
-	 
-	 */
 	 @Given("^Initialize the browser with chrome$")
 	    public void initialize_the_browser_with_chrome() throws Throwable {
 		 driver =initializeDriver();
@@ -160,14 +114,6 @@ public class stepDefination extends base {
 	    }
 
 	
-	/* @Given("^Click on sign in button $")
-	 public void click_on_sign_in_button() {
-		 LoginPage lp=new LoginPage(driver);
-         lp.ClickSignin();
-	     // Write code here that turns the phrase above into concrete actions
-	     throw new cucumber.api.PendingException();
-	 }
-	 */
 	 @Given("Click on sign in button")
 	 public void click_on_sign_in_button() {
 		 LoginPage lp=new LoginPage(driver);
@@ -182,14 +128,7 @@ public class stepDefination extends base {
 	    // throw new cucumber.api.PendingException();
 	 }
 
-	   /* @Given("^ click on create account button$")
-	    public void click_on_create_account_button() throws Throwable {
-	    	 NewAccount na=new NewAccount(driver);
-	         na.ClickCreateAccount();
-	        throw new PendingException();
-	    }
-	    */
-	 
+	   
 	    @When("^User enters (.+),(.+), (.+), (.+)$")
 	    public void user_enters_(String username, String email, String password, String repassword) throws Throwable {
 	    	CreateAccount ca=new CreateAccount(driver);

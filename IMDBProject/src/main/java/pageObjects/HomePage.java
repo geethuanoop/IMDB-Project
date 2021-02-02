@@ -27,10 +27,7 @@ public class HomePage {
     @FindBy(xpath="//div[@class='sc-jzJRlG jGFlLU']//div[1]//span[1]//div[1]//div[1]//ul[1]//a[3]")
     public  WebElement shows;
 
-    @FindBy(id="suggestion-search")
-    public WebElement search;
     
- 
     //@FindBy(linkText="Game of Thrones: The Last Watch")
    // public WebElement movie;
     

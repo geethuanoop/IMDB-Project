@@ -18,11 +18,6 @@ public class LoginPage {
 		
 	}
 
-	//By signin=By.xpath("[//div[contains(text(),'Sign In')]");
-	//By createaccount=By.linkText("Create a New Account");
-
-	//@FindBy(xpath="//div[contains(text(),'Sign In']")
-	//@FindBy(xpath="//div[contains")
 	@FindBy(how=How.XPATH, using ="//div[contains(text(),'Sign In')]")
 	
 	public WebElement btnSignin;
@@ -31,16 +26,8 @@ public class LoginPage {
 		public void ClickSignin(){
 			btnSignin.click();
 		}
-	
-/*	public void ClickCreateAccount()
-	{
-		//return driver.findElement(createaccount);
-		CreateAccount.click();
-		
-	}
-	*/
-		
 
+		
 }
 
 

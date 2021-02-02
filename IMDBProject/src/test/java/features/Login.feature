@@ -10,5 +10,4 @@ Then User is  successfully logged into the application
 
 Examples:
 |username	|	|email|							|password|	|repassword|
-|Geeth    |	|abcd124@gmail.com|	|password1|	|password1|
-|Anoop|		|abc12@gmail.com|		|password2|	|password2|
+|Tester  |	|abcd124@gmail.com|	|password1|	|password1|
